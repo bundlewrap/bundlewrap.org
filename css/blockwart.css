@@ -10,12 +10,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		background-image: url("../img/bkg_@2X.png");
 	}
 }
-footer {
-	color: #666666;
-	margin-top: 47px;
-	text-align: center;
-
-}
 header {
 	margin-bottom: 47px;
 	margin-top: 47px;
