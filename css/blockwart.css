@@ -24,6 +24,27 @@ h1 {
 	font-weight: 300;
 	line-height: 75px;
 }
+h2 {
+	margin-bottom: 20px;
+	margin-left: 47px;
+	margin-top: 32px;
+}
+li {
+	font-size: 16px;
+	line-height: 28px;
+	margin-left: 20px;
+}
+p {
+	color: #444;
+	font-size: 16px;
+	/*line-height: 18px;*/
+	margin-left: 47px;
+	padding-bottom: 10px;
+	text-align: justify;
+}
+ul {
+	margin-left: 47px;
+}
 .badges {
 	margin-bottom: 47px;
 	margin-left: 53px;
@@ -50,6 +71,11 @@ h1 {
 	border-radius: 0 0 6px 6px;
 	border-top: 0;
 	box-shadow: 0 1px 16px rgba(0, 0, 0, 0.9);
+	padding-bottom: 47px;
+}
+.intro {
+	font-size: 20px;
+	line-height: 26px;
 }
 .main_icon {
 	height: 128px;
