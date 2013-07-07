@@ -49,12 +49,11 @@ ul {
 	margin-bottom: 47px;
 	margin-left: 53px;
 	margin-right: 47px;
-	padding-top: 30px;
 	text-align: center;
 }
-.badges a {
+.badgerow {
 	display: block;
-	margin-bottom: 15px;
+	margin: 5px;
 }
 .btn-xlarge {
 	padding: 9px 19px;
