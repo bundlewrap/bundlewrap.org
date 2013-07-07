@@ -30,6 +30,17 @@ h1 {
 	font-weight: 300;
 	line-height: 75px;
 }
+.badges {
+	margin-bottom: 47px;
+	margin-left: 53px;
+	margin-right: 47px;
+	padding-top: 30px;
+	text-align: center;
+}
+.badges a {
+	display: block;
+	margin-bottom: 15px;
+}
 .btn-xlarge {
 	padding: 9px 19px;
 	padding-bottom: 11px;
