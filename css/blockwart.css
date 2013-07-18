@@ -3,12 +3,16 @@ body {
 	background-image: url("../img/bkg.png");
 	font-family: "Maven Pro", sans-serif;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5) {
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
 	body {
 		background-image: url("../img/bkg_@2X.png");
+		background-size: 300px 301px;
 	}
 }
 header {
