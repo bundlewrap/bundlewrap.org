@@ -50,6 +50,11 @@ p {
 ul {
 	margin-left: 47px;
 }
+img.screenshot.terminal {
+	border: 10px solid black;
+	border-radius: 10px;
+	margin-left: 40px;
+}
 .arch img {
 	margin-left: 40px;
 }
