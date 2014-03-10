@@ -4,11 +4,15 @@ body {
 	font-family: Helvetica, sans-serif;
 	font-weight: 100;
 }
-
+a {
+	color: #395169;
+}
+a:hover {
+	text-decoration: none;
+}
 .odd_section {
 	background-color: #fafafa;
 }
-
 .main_icon {
 	display: block;
 	height: 96px;
@@ -16,7 +20,6 @@ body {
 	margin-bottom: 24px;
 	width: 96px;
 }
-
 .main_title {
 	color: black;
 	display: block;
@@ -53,7 +56,6 @@ nav a:hover {
 	color: #395169;
 	text-decoration: none;
 }
-
 h1 {
 	color: black;
 	font-size: 48px;
@@ -91,17 +93,16 @@ h2 {
 	padding-top: 16px;
 	text-align: center;
 }
-
 strong {
 	font-weight: normal;
 }
-
 .helpbox {
 	background-color: #fafafa;
 	border: 1px solid #dddddd;
 	border-radius: 5px;
 	font-weight: 100;
-	margin-top: 48px;
+	margin-top: 36px;
+	margin-bottom: 36px;
 }
 .helpbox div {
 	color: #395169;
@@ -115,11 +116,50 @@ strong {
 	padding-top: 0;
 	text-align: justify;
 }
-
 .helpbox ul {
 	padding-left: 24px;
 	padding-right: 10px;
 }
 .helpbox li {
 	margin-bottom: 5px;
+}
+.text-header {
+	font-size: 18px;
+	text-align: justify;
+	padding-top: 36px;
+	padding-bottom: 10px;
+}
+.text {
+	font-size: 16px;
+	text-align: justify;
+}
+.terminal-output {
+	background-color: black;
+	border-radius: 5px;
+	padding: 15px;
+	margin-top: 36px;
+	margin-bottom: 36px;
+}
+#screenshot_bw_apply {
+	height: 285px;
+	width: 390px;
+}
+footer {
+	padding-top: 48px;
+	padding-bottom: 128px;
+	text-align: center;
+}
+.cta {
+	color: white;
+	background-color: #395169;
+	border-radius: 5px;
+	font-family: "Maven Pro";
+	font-size: 36px;
+	padding-top: 8px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.cta:hover {
+	color: white;
 }
