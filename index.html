@@ -12,102 +12,85 @@
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Maven+Pro" media="screen">
 </head>
 <body>
-	<div class="container">
-		<header>
+	<header class="odd_section">
+		<div class="container">
 			<div class="row">
-				<div class="col-md-2">
-					<img class="main_icon" src="img/icon.png" alt="Blockwart logo">
-				</div>
-				<div class="col-md-6">
-					<div class="main_title">
-						<h1>Blockwart</h1>
-						<div class="subtitle">Config management for Python addicts</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="btn-group pull-right">
-						<a class="btn btn-default btn-xlarge" href="http://github.com/trehn/blockwart"><i class="fa fa-github"></i> GitHub</a>
-						<a class="btn btn-default btn-xlarge" href="http://docs.blockwart.org"><i class="fa fa-book"></i> Docs</a>
-					</div>
-				</div>
-			</div>
-		</header>
-		<div class="row">
-			<div class="col-md-8">
-				<p class="intro">By allowing for easy and low-overhead config management, Blockwart fills the gap between complex deployments using <a href="http://opscode.com/chef">Chef</a> or <a href="http://puppetlabs.com/">Puppet</a> and old school system administration over SSH.</p>
-
-				<hr><h2>How does it work?</h2>
-				<p>While practically all other config management systems rely on a client-server architecture, Blockwart works off a repository cloned to your local machine. It then automates the process of SSHing into your servers and making sure everything is configured the way it's supposed to be. You won't have to install anything on managed servers.</p>
-			</div>
-			<div class="col-md-4">
-				<div class="badges well">
-					<div class="badgerow">
-						<a href="https://crate.io/packages/blockwart/"><img src="https://pypip.in/v/blockwart/badge.png" alt="Version" style="max-width:100%;"></a>
-					</div>
-					<div class="badgerow">
-						<a href="https://crate.io/packages/blockwart/"><img src="https://pypip.in/d/blockwart/badge.png" alt="Downloads" style="max-width:100%;"></a>
-					</div>
-					<div class="badgerow">
-						<a href="https://travis-ci.org/trehn/blockwart"><img src="https://travis-ci.org/trehn/blockwart.png" alt="Build Status" style="max-width:100%;"></a>
-						<a href="https://coveralls.io/r/trehn/blockwart?branch=master"><img src="https://coveralls.io/repos/trehn/blockwart/badge.png?branch=master" alt="Coverage Status" style="max-width:100%;"></a>
-					</div>
-					<hr>
-					Join us on IRC!<br>
-					<a href="irc://irc.freenode.net/blockwart">#blockwart on freenode</a>
-					<hr>
-					If you have any questions, feel free to ping <a href="http://twitter.com/trehn">@trehn</a> on Twitter.
+				<div class="col-md-12">
+					<img class="main_icon pull-left" src="img/icon.png" alt="Blockwart logo">
+					<div class="main_title pull-left">Blockwart</div>
+					<nav class="pull-right">
+						<ul>
+							<li><a href="http://github.com/trehn/blockwart"><i class="fa fa-github"></i> GitHub</a></li>
+							<li><a href="http://docs.blockwart.org"><i class="fa fa-book"></i> Docs</a></li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12"><hr><h2>Usage example</h2></div>
-			<div class="col-md-6">
-				<img class="screenshot terminal" src="img/usage.png" height="298" width="483" alt="terminal screenshot">
-				<br><br>
-			</div>
-			<div class="col-md-5">
-				<p>In the example on the left we are telling Blockwart to interactively apply configuration to the host <em>tardis</em>.</p>
-				<p>Blockwart then shows us the incorrect items one by one (in this case it's only one file with wrong content) and asks for confirmation before overwriting anything.</p>
-				<p>At the end, we get a summary of all changes made and thus the current state of the system.</p>
-				<p>Blockwart uses non-ASCII characters and ANSI color codes to highlight and format information nicely.</p>
-			</div>
-		</div>
+	</header>
+	<div class="separator"></div>
+	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<hr><h2>Characteristics</h2>
-				<ul>
-					<li>there is no server, Blockwart is <strong>decentralized</strong></li>
-					<li>configuration is applied through shell commands <strong>over SSH</strong>, just like you probably did before</li>
-					<li>Blockwart is terribly easy to <strong>extend and integrate</strong> with other systems</li>
-					<li>supported target systems are all sane versions of <strong>Linux</strong>, while you can run Blockwart itself on <strong>Mac OS X</strong> as well</li>
-					<li>you hardly need to know any <a href="http://python.org">Python</a> to get started</li>
-					<li>if you do know some Python, you can <strong>customize</strong> a lot of stuff and even use Blockwart <strong>as a library</strong></li>
-					<li>while Blockwart won't scale to 10000 servers, it's great for <strong>small teams</strong> maintaining up to a couple hundred machines</li>
-					<li>Blockwart is Free Software and published under the GNU General Public License (<a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a>)</li>
-				</ul>
+				<h1>Config management for humans</h1>
+				<h2>Easy. Minimalistic. Decentralized.</h2>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12"><hr></div>
-			<div class="col-md-6 arch">
-				<h2>Blockwart architecture</h2>
-				<img src="img/arch_blockwart.png" height="306" width="425" alt="Blockwart architecture diagram">
-				<br><br><br>
-				<p style="width: 425px">
-					Administrators sync their local repositories through an SCM and apply configuration by connecting directly to the target nodes.
-				</p>
-			</div>
-			<div class="col-md-6 arch">
-				<h2>Conventional architecture</h2>
-				<img src="img/arch_conventional.png" height="450" width="425" alt="Conventional architecture diagram">
-				<br><br><br>
-				<p style="width: 425px">
-					Clients push into an SCM repository that is somehow connected to a config management server. Managed nodes then pull configuration from that server periodically or when triggered by an administrator.
-				</p>
-			</div>
-			<div class="col-md-12">&nbsp;<hr></div>
 		</div>
 	</div>
+	<div class="separator"></div>
+	<div class="odd_section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2 feature">
+					<i class="fa fa-laptop"></i>
+					<p><strong>Decentralized:</strong> There is no server. Just your laptop and your army of nodes.</p>
+				</div>
+				<div class="col-sm-2 feature">
+					<i class="fa fa-tachometer"></i>
+					<p><strong>Quick</strong> and <strong>easy</strong> to get started. You don't even need to know Python.</p>
+				</div>
+				<div class="col-sm-2 feature">
+					<i class="fa fa-plane"></i>
+					<p><strong>Lightweight:</strong> Even managing just a single machine won't feel like overkill.</p>
+				</div>
+				<div class="col-sm-2 feature">
+					<i class="fa fa-cloud-upload"></i>
+					<p><strong>Push</strong> configuration directly using <strong>SSH</strong>. No agent required.</p>
+				</div>
+				<div class="col-sm-2 feature">
+					<i class="fa fa-heart-o"></i>
+					<p>Free as in bird.<br>100% <strong>Free Software</strong>.<br>No Enterprise Edition.</p>
+				</div>
+				<div class="col-sm-2 feature">
+					<i class="fa fa-code"></i>
+					<p><strong>Pythonic</strong> and hackable.<br>Write hooks, custom items or use it just as a library.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="separator"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+			</div>
+			<div class="col-md-5 helpbox">
+				<div><i class="fa fa-info-circle"></i>&nbsp; What is config management?</div>
+				<p>
+					When we talk about config management, we're talking about using a piece of software to manage the state of your servers. It will create files, install software and start services.
+				</p>
+				<p>
+					Using a config management system has many advantages:
+					<ul>
+						<li><strong>Versioning:</strong> Use an SCM tool like git to keep track of changes to your configuration.</li>
+						<li><strong>Uniformity:</strong> Now it's easy to keep similar machines in sync and eliminate configuration drift.</li>
+						<li><strong>Repeatability:</strong> Need another five web servers? You just have to configure them once.</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+	</div>
+	<footer>
+	</footer>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript">
