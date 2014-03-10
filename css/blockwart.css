@@ -1,97 +1,165 @@
+html { margin: 0; padding: 0 }
 body {
 	background-color: white;
-	font-family: "Maven Pro", sans-serif;
-}
-header {
-	margin-bottom: 47px;
-	margin-top: 47px;
-}
-header .btn-group {
-	line-height: 128px;
-	margin-right: 47px;
+	font-family: Helvetica, sans-serif;
+	font-weight: 100;
 }
 a {
-	color: #777;
+	color: #395169;
 }
 a:hover {
 	text-decoration: none;
 }
-h1 {
-	font-family: "Maven Pro", sans-serif;
-	font-size: 96px;
-	font-weight: 200;
-	line-height: 75px;
-}
-h2 {
-	font-family: "Maven Pro", sans-serif;
-	margin-bottom: 20px;
-	margin-left: 47px;
-	margin-top: 32px;
-}
-li {
-	font-size: 16px;
-	line-height: 28px;
-	margin-left: 20px;
-}
-p {
-	color: #444;
-	font-size: 16px;
-	/*line-height: 18px;*/
-	margin-left: 47px;
-	padding-bottom: 10px;
-	text-align: justify;
-}
-ul {
-	margin-left: 47px;
-}
-img.screenshot.terminal {
-	border: 10px solid black;
-	border-radius: 10px;
-	margin-left: 40px;
-}
-.arch img {
-	margin-left: 40px;
-}
-.badges {
-	margin-left: 53px;
-	margin-right: 47px;
-	text-align: center;
-}
-.badgerow {
-	display: block;
-	margin: 5px;
-}
-.btn-xlarge {
-	padding: 9px 19px;
-	padding-bottom: 11px;
-	font-size: 25px !important;
-	line-height: normal;
-	margin-top: 45px;
-	-webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
-	border-radius: 7px;
-}
-.container {
-	margin-bottom: 96px;
-	padding-bottom: 47px;
-}
-.intro {
-	font-size: 20px;
-	line-height: 26px;
+.odd_section {
+	background-color: #fafafa;
 }
 .main_icon {
-	height: 128px;
-	margin-left: 47px;
-	margin-right: 47px;
-	opacity: 0.9;
-	width: 128px;
+	display: block;
+	height: 96px;
+	margin-top: 24px;
+	margin-bottom: 24px;
+	width: 96px;
 }
 .main_title {
-	margin-left: 10px;
+	color: black;
+	display: block;
+	height: 96px;
+	margin-left: 24px;
+	margin-top: 24px;
+	margin-bottom: 24px;
+	font-family: "Maven Pro", sans-serif;
+	font-size: 72px;
+	font-weight: 100;
+	line-height: 90px;
 }
-.subtitle {
-	color: #a0a0a0;
-	font-size: 20px;
-	margin-left: 10px;
-	padding-top: 6px;
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+nav li {
+	display: inline-block;
+	font-size: 32px;
+	line-height: 96px;
+	list-style: none;
+	margin-left: 0;
+	margin-top: 24px;
+}
+nav li:last-child {
+	margin-left: 32px;
+}
+nav a {
+	color: black;
+	font-weight: 100;
+}
+nav a:hover {
+	/*color: #428BCA;*/
+	color: #395169;
+	text-decoration: none;
+}
+h1 {
+	color: black;
+	font-size: 48px;
+	font-weight: 100;
+	margin: 0;
+	margin-top: 48px;
+	margin-bottom: 12px;
+	padding: 0;
+}
+h2 {
+	color: #808080;
+	font-size: 26px;
+	font-weight: 300;
+	margin: 0;
+	margin-bottom: 52px;
+	padding: 0;
+}
+.separator {
+	height: 1px;
+	border-bottom: 1px solid #dddddd;
+}
+.feature {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	text-align: center;
+}
+.feature i {
+	color: #428BCA;
+	color: black;
+	color: #395169;
+	font-size: 32px;
+}
+.feature p {
+	font-weight: 100;
+	padding-top: 16px;
+	text-align: center;
+}
+strong {
+	font-weight: normal;
+}
+.helpbox {
+	background-color: #fafafa;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	font-weight: 100;
+	margin-top: 36px;
+	margin-bottom: 36px;
+}
+.helpbox div {
+	color: #395169;
+	font-size: 24px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-left: 10px;
+}
+.helpbox p {
+	padding: 10px;
+	padding-top: 0;
+	text-align: justify;
+}
+.helpbox ul {
+	padding-left: 24px;
+	padding-right: 10px;
+}
+.helpbox li {
+	margin-bottom: 5px;
+}
+.text-header {
+	font-size: 18px;
+	text-align: justify;
+	padding-top: 36px;
+	padding-bottom: 10px;
+}
+.text {
+	font-size: 16px;
+	text-align: justify;
+}
+.terminal-output {
+	background-color: black;
+	border-radius: 5px;
+	padding: 15px;
+	margin-top: 36px;
+	margin-bottom: 36px;
+}
+#screenshot_bw_apply {
+	height: 285px;
+	width: 390px;
+}
+footer {
+	padding-top: 48px;
+	padding-bottom: 128px;
+	text-align: center;
+}
+.cta {
+	color: white;
+	background-color: #395169;
+	border-radius: 5px;
+	font-family: "Maven Pro";
+	font-size: 36px;
+	padding-top: 8px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.cta:hover {
+	color: white;
 }
