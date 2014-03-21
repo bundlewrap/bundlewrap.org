@@ -142,11 +142,6 @@ strong {
 	height: 285px;
 	width: 390px;
 }
-footer {
-	padding-top: 48px;
-	padding-bottom: 128px;
-	text-align: center;
-}
 .cta {
 	padding: 80px;
 	text-align: center;
@@ -166,11 +161,11 @@ footer {
 	color: white;
 }
 footer {
-	margin-top: 40px;
-	margin-bottom: 40px;
+	padding: 48px;
+	text-align: center;
 }
 footer a {
-	color: #909fae;
+	color: #bac3cc;
 	font-size: 36px;
 	margin-left: 20px;
 }
