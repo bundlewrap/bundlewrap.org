@@ -52,7 +52,6 @@ nav a {
 	font-weight: 100;
 }
 nav a:hover {
-	/*color: #428BCA;*/
 	color: #395169;
 	text-decoration: none;
 }
@@ -83,7 +82,6 @@ h2 {
 	text-align: center;
 }
 .feature i {
-	color: #428BCA;
 	color: black;
 	color: #395169;
 	font-size: 32px;
