@@ -148,6 +148,10 @@ footer {
 	text-align: center;
 }
 .cta {
+	padding: 80px;
+	text-align: center;
+}
+.cta a {
 	color: white;
 	background-color: #395169;
 	border-radius: 5px;
@@ -160,4 +164,16 @@ footer {
 }
 .cta:hover {
 	color: white;
+}
+footer {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+footer a {
+	color: #909fae;
+	font-size: 36px;
+	margin-left: 20px;
+}
+footer a:hover {
+	color: #395169;
 }
