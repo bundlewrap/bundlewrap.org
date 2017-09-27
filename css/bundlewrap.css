@@ -15,7 +15,7 @@ a:hover {
 	background-color: #fafafa;
 }
 .main_icon {
-	border-radius: 10px;
+	border-radius: 5px;
 	display: block;
 	height: 96px;
 	margin-top: 24px;
@@ -78,6 +78,7 @@ h2 {
 	border-bottom: 1px solid #dddddd;
 }
 .feature {
+	font-size: 15px;
 	padding-top: 24px;
 	padding-bottom: 24px;
 	text-align: center;
@@ -95,12 +96,15 @@ strong {
 	font-weight: normal;
 }
 .helpbox {
-	background-color: #fafafa;
+	background-color: white;
 	border: 1px solid #dddddd;
 	border-radius: 5px;
 	font-weight: 100;
+	font-size: 14px;
 	margin-top: 36px;
 	margin-bottom: 36px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 .helpbox div {
 	color: black;
@@ -111,6 +115,7 @@ strong {
 }
 .helpbox p {
 	padding: 10px;
+	padding-bottom: 0;
 	padding-top: 0;
 	text-align: justify;
 }
@@ -122,25 +127,43 @@ strong {
 	margin-bottom: 5px;
 }
 .text-header {
-	font-size: 18px;
+	font-size: 17px;
 	text-align: justify;
 	padding-top: 36px;
 	padding-bottom: 10px;
 }
 .text {
-	font-size: 16px;
+	font-size: 15px;
 	text-align: justify;
 }
-.terminal-output {
+.terminal {
 	background-color: black;
 	border-radius: 5px;
-	padding: 15px;
-	margin-top: 36px;
-	margin-bottom: 36px;
+	color: #d7d7d7;
+	font-family: source-code-pro;
+	font-size: 12px;
+	line-height: 140%;
+	margin-bottom: 32px;
+	margin-top: 32px;
+	overflow: scroll;
+	padding-left: 15px;
+	padding: 10px;
+	white-space: pre;
 }
-#screenshot_bw_apply {
-	height: 241px;
-	width: 409px;
+.terminal b {
+	color: white;
+}
+.terminal .blue {
+	color: #0225c7;
+}
+.terminal .green {
+	color: #0af70a;
+}
+.terminal .red {
+	color: #f13113;
+}
+.terminal .yellow {
+	color: #f3ef0e;
 }
 .cta {
 	padding: 80px;

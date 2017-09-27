@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 	<title>BundleWrap &middot; Config management with Python</title>
 	<meta name="description" content="A decentralized configuration management system that is designed to be powerful, easy to extend and extremely versatile.">
 
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bundlewrap.css" media="screen">
 
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Maven+Pro" media="screen">
+	<script src="https://use.edgefonts.net/source-code-pro:n4,n7:all.js"></script>
 </head>
 <body>
 	<header class="odd_section">
@@ -71,54 +74,94 @@
 	<div class="separator"></div>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
-				<p class="text-header">
-					By allowing for easy and low-overhead config management, BundleWrap fills the gap between complex deployments using <a href="http://opscode.com/chef">Chef</a> or <a href="http://puppetlabs.com/">Puppet</a> and old school system administration over SSH.
-				</p>
-				<p class="text">
-					While most other config management systems rely on a client-server architecture, BundleWrap works off a repository cloned to your local machine.
-				</p>
-				<p class="text">
-					It then automates the process of SSHing into your servers and making sure everything is configured the way it's supposed to be. You won't have to install anything on managed servers.
-				</p>
-				<p class="text">
-					BundleWrap is Free Software licensed under the GNU General Public License.
-				</p>
+			<div class="col">
+				<div class="terminal">$ bw repo create
+$ bw repo bundle create motd
+$ vim bundles/motd/items.py
+
+files = {
+    '/etc/motd': {
+        'content': 'Hear me roar',
+    },
+}
+
+$ vim nodes.py
+
+nodes = {
+    'localhost': {
+        'bundles': ['motd'],
+    },
+}
+
+
+
+
+
+
+</div>
 			</div>
-			<div class="col-md-5 col-md-offset-1 helpbox">
-				<div><i class="fa fa-info-circle"></i>&nbsp; What is config management?</div>
-				<p>
-					When we talk about config management, we're talking about using a piece of software to manage the state of your servers. It will create files, install software and start services.
-				</p>
-				<p>
-					Using a config management system has many advantages:
-					<ul>
-						<li><strong>Versioning:</strong> Use an SCM tool like git to keep track of changes to your configuration.</li>
-						<li><strong>Uniformity:</strong> Now it's easy to keep similar machines in sync and eliminate configuration drift.</li>
-						<li><strong>Repeatability:</strong> Need another five web servers? You just have to configure them once.</li>
-					</ul>
-				</p>
+			<div class="col">
+				<div class="terminal">$ bw apply -i localhost
+
+<span class="blue">i</span> <b>localhost</b>  <b>started</b> at 2017-09-27 22:13:00
+<span class="blue">?</span> <b>localhost</b>
+<span class="blue">?</span> <b>localhost</b>  ╭─ file:/etc/motd
+<span class="blue">?</span> <b>localhost</b>  │
+<span class="blue">?</span> <b>localhost</b>  │  <b>content</b>
+<span class="blue">?</span> <b>localhost</b>  │  <span class="red">--- &lt;node&gt;</span>
+<span class="blue">?</span> <b>localhost</b>  │  <span class="green">+++ &lt;bundlewrap&gt;</span>
+<span class="blue">?</span> <b>localhost</b>  │  @@ -1 +1 @@
+<span class="blue">?</span> <b>localhost</b>  │  <span class="red">-A lion still has claws</span>
+<span class="blue">?</span> <b>localhost</b>  │  <span class="green">+Hear me roar</span> (no newline at end of file)
+<span class="blue">?</span> <b>localhost</b>  │
+<span class="blue">?</span> <b>localhost</b>  ╰─ Fix <b>file:/etc/motd</b>? [Y/n]
+<span class="blue">?</span> <b>localhost</b>
+<span class="green">✓</span> <b>localhost</b>  <b>locale</b>  file:/etc/motd <span class="green">fixed</span> (content)
+<span class="blue">i</span> <b>localhost</b>  <b>completed</b> after 3s  (0 OK, <span class="green">1 fixed</span>, 0 skipped, 0 failed)
+<span class="blue">i</span> ╭───────────┬───────┬────┬───────┬─────────┬────────┬──────╮
+<span class="blue">i</span> │ <b>node</b>      │ items │ OK │ <span class="green">fixed</span> │ <span class="yellow">skipped</span> │ <span class="red">failed</span> │ time │
+<span class="blue">i</span> ├───────────┼───────┼────┼───────┼─────────┼────────┼──────┤
+<span class="blue">i</span> │ localhost │     1 │  0 │     <span class="green">1</span> │       0 │      0 │   3s │
+<span class="blue">i</span> ╰───────────┴───────┴────┴───────┴─────────┴────────┴──────╯
+
+</div>
 			</div>
 		</div>
 	</div>
 	<div class="separator"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="terminal-output">
-					<img id="screenshot_bw_apply" src="img/usage.png" alt="bw apply -i output">
+	<div class="odd_section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<p class="text-header">
+						By allowing for easy and low-overhead config management, BundleWrap fills the gap between complex deployments using <a href="http://opscode.com/chef">Chef</a>	 or <a href="http://puppetlabs.com/">Puppet</a> and old school system administration over SSH.
+					</p>
+					<p class="text">
+						While most other config management systems rely on a client-server architecture, BundleWrap works off a repository cloned to your local machine.
+					</p>
+					<p class="text">
+						It then automates the process of SSHing into your servers and making sure everything is configured the way it's supposed to be. You won't have to install 	anything on managed servers.
+					</p>
+					<p class="text">
+						BundleWrap is Free Software licensed under the GNU General Public License.
+					</p>
 				</div>
-			</div>
-			<div class="col-md-5 col-md-offset-1">
-				<p class="text-header">
-					This example shows the output of <strong>bw apply -i tardis</strong>.
-				</p>
-				<p class="text">
-					BundleWrap uses color and non-ascii characters to format its output nicely. As you can see, interactive mode will show you what would be done and gives you an opportunity to decline a destructive change.
-				</p>
-				<p class="text">
-					For non-interactive use, BundleWrap features a more grep-able output. If an error (e.g. an unreachable node) is encountered, you will get a summary of all errors at the very end, so you don't miss anything important scrolling by.
-				</p>
+				<div class="col-md-6 ml-auto">
+					<div class="helpbox">
+						<div><i class="fa fa-info-circle"></i>&nbsp; What is config management?</div>
+						<p>
+							When we talk about config management, we're talking about using a piece of software to manage the state of your servers. It will create files, install 		software and start services.
+						</p>
+						<p>
+							Using a config management system has many advantages:
+							<ul>
+								<li><strong>Versioning:</strong> Use an SCM tool like git to keep track of changes to your configuration.</li>
+								<li><strong>Uniformity:</strong> Now it's easy to keep similar machines in sync and eliminate configuration drift.</li>
+								<li><strong>Repeatability:</strong> Need another five web servers? You just have to configure them once.</li>
+							</ul>
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -131,7 +174,7 @@
 		</div>
 	</div>
 	<div class="separator"></div>
-	<footer>
+	<footer class="odd_section">
 		<a href="https://github.com/bundlewrap/bundlewrap"><i class="fa fa-github"></i></a>
 		<a href="https://twitter.com/bundlewrap"><i class="fa fa-twitter"></i></a>
 		<a href="http://docs.bundlewrap.org"><i class="fa fa-book"></i></a>
