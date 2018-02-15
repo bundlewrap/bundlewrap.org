@@ -13,8 +13,7 @@ a:hover {
 }
 .blue_section {
 	background-color: #003b5d;
-	background: linear-gradient(to bottom, #003b5d 0%,#178acc  100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	background: linear-gradient(to bottom, #003b5d 0%,#000000  100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: linear-gradient(to bottom, #00283f 0%, #000000 100%);
 	border-top: 1px solid #178acc;
 }
 .main_icon {
