@@ -6,23 +6,25 @@
 	<title>BundleWrap &middot; Config management with Python</title>
 	<meta name="description" content="A decentralized configuration management system that is designed to be powerful, easy to extend and extremely versatile.">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
 	<link rel="stylesheet" type="text/css" href="css/bundlewrap.css" media="screen">
 
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Maven+Pro" media="screen">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600" media="screen">
 	<script src="https://use.edgefonts.net/source-code-pro:n4,n7:all.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
-	<header class="odd_section">
+	<header>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<img class="main_icon pull-left" src="img/icon.png" alt="BundleWrap logo">
-					<div class="main_title pull-left">BundleWrap</div>
-					<nav class="pull-right">
+					<img class="main_icon float-left" src="img/icon.png" alt="BundleWrap logo">
+					<div class="main_title float-left">BundleWrap</div>
+					<nav class="float-right">
 						<ul>
-							<li><a href="https://github.com/bundlewrap/bundlewrap"><i class="fa fa-github"></i> GitHub</a></li>
+							<li><a href="https://github.com/bundlewrap/bundlewrap"><i class="fab fa-github"></i> GitHub</a></li>
 							<li><a href="http://docs.bundlewrap.org"><i class="fa fa-book"></i> Docs</a></li>
 						</ul>
 					</nav>
@@ -30,47 +32,16 @@
 			</div>
 		</div>
 	</header>
-	<div class="separator"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h1>Config management with Python</h1>
-				<h2>Easy. Minimalistic. Decentralized.</h2>
-			</div>
-		</div>
-	</div>
-	<div class="separator"></div>
-	<div class="odd_section">
+	<div class="blue_section">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-2 feature">
-					<i class="fa fa-laptop"></i>
-					<p><strong>Decentralized:</strong> There is no server. Just your laptop and your army of nodes.</p>
-				</div>
-				<div class="col-sm-2 feature">
-					<i class="fa fa-tachometer"></i>
-					<p><strong>Quick</strong> and <strong>easy</strong> to get started. You don't even need to know Python.</p>
-				</div>
-				<div class="col-sm-2 feature">
-					<i class="fa fa-plane"></i>
-					<p><strong>Lightweight:</strong> Even managing just a single machine won't feel like overkill.</p>
-				</div>
-				<div class="col-sm-2 feature">
-					<i class="fa fa-cloud-upload"></i>
-					<p><strong>Push</strong> configuration directly using <strong>SSH</strong>. No agent required.</p>
-				</div>
-				<div class="col-sm-2 feature">
-					<i class="fa fa-heart-o"></i>
-					<p>Free as in bird.<br>100% <strong>Free Software</strong>.<br>No Enterprise Edition.</p>
-				</div>
-				<div class="col-sm-2 feature">
-					<i class="fa fa-code"></i>
-					<p><strong>Pythonic</strong> and hackable.<br>Write hooks, custom items or use it just as a library.</p>
+				<div class="col-md-12">
+					<h1>Config management with Python</h1>
+					<h2>Easy. Minimalistic. Decentralized.</h2>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="separator"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col">
@@ -127,44 +98,36 @@ nodes = {
 			</div>
 		</div>
 	</div>
-	<div class="separator"></div>
-	<div class="odd_section">
+	<div class="blue_section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
-					<p class="text-header">
-						By allowing for easy and low-overhead config management, BundleWrap fills the gap between complex deployments using <a href="http://opscode.com/chef">Chef</a>	 or <a href="http://puppetlabs.com/">Puppet</a> and old school system administration over SSH.
-					</p>
-					<p class="text">
-						While most other config management systems rely on a client-server architecture, BundleWrap works off a repository cloned to your local machine.
-					</p>
-					<p class="text">
-						It then automates the process of SSHing into your servers and making sure everything is configured the way it's supposed to be. You won't have to install 	anything on managed servers.
-					</p>
-					<p class="text">
-						BundleWrap is Free Software licensed under the GNU General Public License.
-					</p>
+				<div class="col-sm-2 feature">
+					<div class="feature-icon"><i class="fas fa-laptop"></i></div>
+					<p><strong>Decentralized.</strong> There is no server. Just your laptop and your army of nodes.</p>
 				</div>
-				<div class="col-md-6 ml-auto">
-					<div class="helpbox">
-						<div><i class="fa fa-info-circle"></i>&nbsp; What is config management?</div>
-						<p>
-							When we talk about config management, we mean using a piece of software to manage the state of your servers. It will create files, install software and start services.
-						</p>
-						<p>
-							Using a config management system has many advantages:
-							<ul>
-								<li><strong>Versioning:</strong> Use an SCM tool like git to keep track of changes to your configuration.</li>
-								<li><strong>Uniformity:</strong> Now it's easy to keep similar machines in sync and eliminate configuration drift.</li>
-								<li><strong>Repeatability:</strong> Need another five web servers? You just have to configure them once.</li>
-							</ul>
-						</p>
-					</div>
+				<div class="col-sm-2 feature">
+					<div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+					<p><strong>Quick</strong> and <strong>easy</strong> to get started. You don't even need to know Python.</p>
+				</div>
+				<div class="col-sm-2 feature">
+					<div class="feature-icon"><i class="fas fa-plane"></i></div>
+					<p><strong>Lightweight.</strong> Even managing just a single machine won't feel like overkill.</p>
+				</div>
+				<div class="col-sm-2 feature">
+					<div class="feature-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+					<p><strong>Push</strong> configuration directly using <strong>SSH</strong>. No agent required.</p>
+				</div>
+				<div class="col-sm-2 feature">
+					<div class="feature-icon"><i class="far fa-heart"></i></div>
+					<p>Free as in bird.<br>100% <strong>Free Software</strong>.<br>No Enterprise Edition.</p>
+				</div>
+				<div class="col-sm-2 feature">
+					<div class="feature-icon"><i class="fas fa-code"></i></div>
+					<p><strong>Pythonic</strong> and hackable.<br>Write hooks, custom items or use it as a library.</p>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="separator"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 cta">
@@ -172,10 +135,9 @@ nodes = {
 			</div>
 		</div>
 	</div>
-	<div class="separator"></div>
-	<footer class="odd_section">
-		<a href="https://github.com/bundlewrap/bundlewrap"><i class="fa fa-github"></i></a>
-		<a href="https://twitter.com/bundlewrap"><i class="fa fa-twitter"></i></a>
+	<footer class="blue_section">
+		<a href="https://github.com/bundlewrap/bundlewrap"><i class="fab fa-github"></i></a>
+		<a href="https://twitter.com/bundlewrap"><i class="fab fa-twitter"></i></a>
 		<a href="http://docs.bundlewrap.org"><i class="fa fa-book"></i></a>
 	</footer>
 	<script type="text/javascript">

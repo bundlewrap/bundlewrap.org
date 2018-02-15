@@ -1,21 +1,25 @@
 html { margin: 0; padding: 0 }
 body {
-	background-color: white;
-	font-family: Helvetica, sans-serif;
+	background-color: black;
+	font-family: "Open Sans", Helvetica, sans-serif;
 	font-weight: 100;
 }
 a {
-	color: black;
+	color: white;
 }
 a:hover {
-	color: black;
+	color: white;
 	text-decoration: none;
 }
-.odd_section {
-	background-color: #fafafa;
+.blue_section {
+	background-color: #003b5d;
+	background: linear-gradient(to bottom, #003b5d 0%,#178acc  100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: linear-gradient(to bottom, #003b5d 0%,#000000  100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	border-top: 1px solid #178acc;
 }
 .main_icon {
-	border-radius: 5px;
+	border: 1px solid white;
+	border-radius: 8px;
 	display: block;
 	height: 96px;
 	margin-top: 24px;
@@ -23,7 +27,7 @@ a:hover {
 	width: 96px;
 }
 .main_title {
-	color: black;
+	color: white;
 	display: block;
 	height: 96px;
 	margin-left: 24px;
@@ -50,14 +54,14 @@ nav li:last-child {
 	margin-left: 32px;
 }
 nav a {
-	color: black;
+	color: white;
 	font-weight: 100;
 }
 nav a:hover {
 	text-decoration: none;
 }
 h1 {
-	color: black;
+	color: white;
 	font-size: 48px;
 	font-weight: 100;
 	margin: 0;
@@ -66,25 +70,22 @@ h1 {
 	padding: 0;
 }
 h2 {
-	color: #808080;
+	color: #a0a0a0;
 	font-size: 26px;
 	font-weight: 300;
 	margin: 0;
 	margin-bottom: 52px;
 	padding: 0;
 }
-.separator {
-	height: 1px;
-	border-bottom: 1px solid #dddddd;
-}
 .feature {
+	color: #d0d0d0;
 	font-size: 15px;
 	padding-top: 24px;
 	padding-bottom: 24px;
 	text-align: center;
 }
-.feature i {
-	color: black;
+.feature-icon {
+	color: #e0e0e0;
 	font-size: 32px;
 }
 .feature p {
@@ -93,46 +94,49 @@ h2 {
 	text-align: center;
 }
 strong {
-	font-weight: normal;
+	color: white;
+	font-weight: 600;
 }
 .helpbox {
-	background-color: white;
-	border: 1px solid #dddddd;
+	background-color: #151515;
+	border: 1px solid #303030;
 	border-radius: 5px;
+	color: #d0d0d0;
 	font-weight: 100;
-	font-size: 14px;
+	font-size: 15px;
 	margin-top: 36px;
 	margin-bottom: 36px;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-.helpbox div {
-	color: black;
-	font-size: 24px;
-	padding-top: 16px;
-	padding-bottom: 16px;
-	padding-left: 10px;
-}
-.helpbox p {
-	padding: 10px;
-	padding-bottom: 0;
-	padding-top: 0;
+	padding: 24px;
 	text-align: justify;
+}
+.helpbox-header {
+	color: #d0d0d0;
+	font-size: 24px;
+	padding-bottom: 16px;
+}
+.helpbox-section {
+	font-size: 20px;
 }
 .helpbox ul {
 	padding-left: 24px;
 	padding-right: 10px;
 }
 .helpbox li {
+	color: #d0d0d0;
 	margin-bottom: 5px;
 }
+.help-header {
+	color: white;
+}
 .text-header {
-	font-size: 17px;
+	color: #d0d0d0;
+	font-size: 15px;
 	text-align: justify;
 	padding-top: 36px;
 	padding-bottom: 10px;
 }
 .text {
+	color: #d0d0d0;
 	font-size: 15px;
 	text-align: justify;
 }
@@ -170,8 +174,8 @@ strong {
 	text-align: center;
 }
 .cta a {
-	color: white;
-	background-color: black;
+	color: black;
+	background-color: white;
 	border-radius: 5px;
 	font-family: "Maven Pro";
 	font-size: 36px;
@@ -193,5 +197,5 @@ footer a {
 	margin-left: 20px;
 }
 footer a:hover {
-	color: #333;
+	color: white;
 }
