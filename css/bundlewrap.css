@@ -143,7 +143,7 @@ strong {
 	background-color: black;
 	border-radius: 5px;
 	color: #d7d7d7;
-	font-family: source-code-pro;
+	font-family: source-code-pro, monospace;
 	font-size: 12px;
 	line-height: 140%;
 	margin-bottom: 32px;
